@@ -1,0 +1,16 @@
+.payment-status .wrapper {
+  background-color: #f1f1f1;
+}
+
+.payment-status .wrapper img {
+  width: 100px;
+}
+
+.apply-order .applay-form select{
+    font-size:14px;
+}
+.apply-order .applay-form .nice-select .list .option{
+    font-size:14px;
+    padding-right:5px;
+}
+/*# sourceMappingURL=payment.css.map */

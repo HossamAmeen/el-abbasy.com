@@ -1,0 +1,118 @@
+.apply-order .addional-information {
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.apply-order .addional-information .jumbrton {
+  background-color: #231f20;
+  padding: 10px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.apply-order .addional-information .jumbrton h6 {
+  margin: 0;
+  color: #231f20;
+  position: relative;
+  color: #fff;
+  display: inline-block;
+}
+
+.apply-order .addional-information .jumbrton h6::after {
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  content: "";
+  background-color: #fff;
+  z-index: 4;
+  opacity: 1;
+  height: 1px;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.apply-order .addional-information textarea {
+  height: 70px !important;
+}
+
+.apply-order .addional-information .input-group-text {
+  border: 0;
+}
+
+.apply-order .addional-information .label-lone {
+  margin-bottom: 0 !important;
+}
+
+.apply-order .addional-information .cost {
+  background-color: rgba(0, 39, 0, 0.322);
+  padding: 18px;
+  border-radius: 5px;
+  padding-bottom: 13px;
+  margin-bottom: 20px;
+}
+
+.apply-order .addional-information .cost h5 {
+  margin: 0;
+  color: #fff;
+  font-size: 16px;
+}
+
+.preview-order-compleate {
+  text-align: center;
+  padding-top: 60px;
+}
+
+.preview-order-compleate .wrapper {
+  width: 450px;
+  margin: auto;
+  background-color: #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 100%;
+}
+
+.preview-order-compleate .wrapper p {
+  margin: 0;
+  font-size: 18px;
+}
+
+.active-addional-information {
+  height: auto !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+#applayResult .modal-dialog, #applayResult .modal-content, #applayResult .modal-body {
+  border: 0;
+}
+
+#applayResult .modal-header {
+  padding: 0;
+  padding: 5px;
+}
+
+#applayResult .modal-header .close {
+  padding: 0;
+  margin: 0 !important;
+}
+
+#applayResult .modal-content {
+  border-radius: 15px;
+  padding: 20px;
+}
+
+#applayResult .modal-content .modal-body {
+  font-size: 15px;
+}
+
+@media (max-width: 524px) {
+  .preview-order-compleate .wrapper p {
+    margin: 0;
+    font-size: 14px;
+  }
+}
+/*# sourceMappingURL=applay-order.css.map */

@@ -1,0 +1,118 @@
+$mainColor: #cda274;
+$secondColor: #231f20;
+
+.apply-order{
+  .addional-information{
+    // height: 0;
+    // overflow: hidden;
+    transition: all .3s ease-in-out;
+    // visibility: hidden;
+    // opacity: 0;
+    .jumbrton{
+      background-color: $secondColor;
+      padding: 10px;
+      padding-bottom: 5px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      h6{
+        margin: 0;
+        color: $secondColor;
+        position: relative;
+        color: #fff;
+        display: inline-block;
+        &::after{
+          position: absolute;
+          right: 100%;
+          top: 50%;
+          transform: translate(0, -50%);
+          content: "";
+          background-color: #fff;
+          z-index: 4;
+          opacity: 1;
+          height: 1px;
+          width: 50px;
+          margin-right: 10px;
+        }
+      }
+    }
+    textarea{
+      height: 70px !important;
+    }
+    .input-group-text{
+      border: 0;
+    }
+    .label-lone{
+      margin-bottom: 0 !important;
+    }
+    .cost{
+      background-color: rgba(0, 39, 0, 0.322);
+      padding: 18px;
+      border-radius: 5px;
+      padding-bottom: 13px;
+      margin-bottom: 20px;
+      h5{
+        margin: 0;
+        color: #fff;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.preview-order-compleate{
+  text-align: center;
+  padding-top: 60px;
+  .wrapper{
+    width: 450px;
+    margin: auto;
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 100%;
+    p{
+      margin: 0;
+      font-size: 18px;
+    }
+  }
+}
+
+.active-addional-information{
+  height: auto !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+#applayResult{
+  .modal-dialog, .modal-content, .modal-body{
+    border: 0;
+  }
+  .modal-header{
+    padding: 0;
+    padding: 5px;
+  }
+  .modal-header .close{
+    padding: 0;
+    margin: 0 !important;
+  }
+  .modal-content{
+    border-radius: 15px;
+    padding: 20px;
+    .modal-body{
+      font-size: 15px;
+    }
+  }
+}
+
+@media(max-width: 524px){
+  .preview-order-compleate{
+
+    .wrapper{
+
+      p{
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+  }
+}
