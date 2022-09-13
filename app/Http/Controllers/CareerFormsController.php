@@ -107,7 +107,7 @@ class CareerFormsController extends Controller
                 $jobs = $jobs->load('translations');
                 $page = $page->load('translations');
                 Mail::to(env('MAIL_TO'))->send(new JobMailer(env('MAIL_TO'), $career_form->name, $career_form->number));
-                return view('joinUs', ['jobs' => $jobs, 'page' => $page, 'video' => $video]);
+                return view('joinUs', ['success' => $success,'jobs' => $jobs, 'page' => $page, 'video' => $video]);
             }
         } else {
             if (!$career_form->save()) {
@@ -131,7 +131,7 @@ class CareerFormsController extends Controller
 
     public function index()
     {
-//    $jobs = Job::all();
+        //    $jobs = Job::all();
         $page = Page::where('model_name', 'joinUs')->get()->first();
         $video = "";
         $explode_video = json_decode($page->video, true);
