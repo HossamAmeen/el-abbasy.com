@@ -112,6 +112,9 @@ Route::get('servicesDetails/sub_details/{id}', [\App\Http\Controllers\SubDetailC
 Route::get('/joinUs', [\App\Http\Controllers\CareerFormsController::class,'index']);
 Route::post('/joinUs', [\App\Http\Controllers\CareerFormsController::class,'store']);
 
+Route::get('courses/{course_id?}', [\App\Http\Controllers\CourseController::class,'index']);
+Route::get('join-course', [\App\Http\Controllers\CourseController::class,'index']);
+
 Route::post('/callback', [\App\Http\Controllers\PayMobController::class,'processedCallback']);
 Route::get('/response', [\App\Http\Controllers\PayMobController::class,'processedResponse']);
 

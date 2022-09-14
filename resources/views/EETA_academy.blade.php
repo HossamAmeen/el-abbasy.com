@@ -75,13 +75,13 @@
                 </div>
 
                 <div class="col-sm-12 col-md-6 col-lg-4">
-                    <a href="/CommingSoon" class="cardLink">
+                    <a href="{{url('courses')}}" class="cardLink">
                         <div class="card_img">
                             <img src="./assets/images/search-career-work-job-recruitment-employee-svgrepo-com.svg"
                                 alt="">
                         </div>
                         <!-- <h5 class="card_title">مجالات الاعمال المتكاملة</h5> -->
-                        <button type="button" href="" class="btn"> <span>البرامج التدريبية</span> <img
+                        <button type="button" class="btn"> <span>البرامج التدريبية</span> <img
                                 src="./assets/images/left-arrow-svgrepo-com.svg" alt=""></button>
                     </a>
                 </div>
