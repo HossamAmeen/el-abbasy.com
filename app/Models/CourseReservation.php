@@ -9,7 +9,8 @@ class CourseReservation extends Model
 {
     use HasFactory;
     
-    public $fillable = ['course_id',
+    public $fillable = [
+    'course_id',
     'name',
     'nationality',
     'national_id',
@@ -20,6 +21,7 @@ class CourseReservation extends Model
     'university',
     'favourite_time',
     'favourite_attendees',
-    'payment_time','payment_option','payment_method'];
+    'payment_time','payment_option','payment_method'
+];
     
 }

@@ -8,7 +8,7 @@
     ?>
  <style>
     .payment_type_parent1, .payment_type_parent2{
-      display: none;
+      /* display: none; */
     }
   </style>
 <div class="breadcrumb" style="background-image: url({{asset('assets/images/breadcrumb.png')}});">
@@ -64,6 +64,7 @@
             });
         </script>
         @endif
+
         <form action="{{url('course_reservation/'.$course_id)}}" method="POST">
             @csrf
           <div class="row">
@@ -86,20 +87,12 @@
               </div>
             </div>
             
-            <div class="col-sm-12 col-md-12 col-lg-12">
-              <div class="form-group">
-                <label for="program">هل انت؟</label>
-                <select name="is_student" class="form-control customSelect" id="program">
-                  <option value="طالب">طالب</option>
-                  <option value="خريج">خريج</option>
-                </select>
-              </div>
-            </div>
+
 
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="form-group">
                 <label for="national">الجنسية</label>
-                <input type="text" name="national" id="national" placeholder="الجنسية" class="form-control">
+                <input type="text" name="nationality" id="national" placeholder="الجنسية" class="form-control">
               </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12">
@@ -112,7 +105,7 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="form-group">
                 <label for="phoneNumber">مفتاح الدوله – رقم الهاتف</label>
-                <input type="text" name="phone" id="phoneNumber"
+                <input type="text" name="phone_number" id="phoneNumber"
                   placeholder="يررج ادخال الهاتف مسبوقا برمز الدوله التابع لها - )00000 - 00000000000)"
                   class="form-control">
               </div>
@@ -120,13 +113,13 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="form-group">
                 <label for="phoneNumber"> البريد الإلكتروني </label>
-                <input type="text" name="email" id="phoneNumber" placeholder="البريد الإلكتروني" class="form-control">
+                <input type="email" name="email" id="phoneNumber" placeholder="البريد الإلكتروني" class="form-control">
               </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="form-group">
                 <label for="program">الدرجه العلميه</label>
-                <select name="education_level" class="form-control customSelect" id="program">
+                <select name="degree" class="form-control customSelect" id="program">
                   <option  selected disabled>يرجى اختيار الدرجه العلميه</option>
                   <option >طالب</option>
                   <option >متوسط</option>
@@ -148,7 +141,7 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="form-group">
                 <label for="phoneNumber">الكلية</label>
-                <input type="text" name="college" id="phoneNumber" placeholder="يرجى ادخال اسم الكلية " class="form-control">
+                <input type="text" name="collage" id="phoneNumber" placeholder="يرجى ادخال اسم الكلية " class="form-control">
               </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12">
@@ -160,7 +153,7 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="form-group">
                 <label for="phoneNumber">الوقت المفضل </label>
-                <select name="favorite_time" class="form-control customSelect" id="program">
+                <select name="favourite_time" class="form-control customSelect" id="program">
                   <option >صباحي</option>
                   <option >مسائي</option>
                 </select>
@@ -169,7 +162,7 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="form-group">
                 <label for="phoneNumber">الحضور المفضل</label>
-                <select name="preferred_attendees" class="form-control customSelect" id="program">
+                <select name="favourite_attendees" class="form-control customSelect" id="program">
                   <option >عن بعد</option>
                   <option >لحضور باحد مراكز التدريب</option>
                 </select>
@@ -179,7 +172,7 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="form-group">
                 <label for="order-type3">الدفع</label>
-                <select name="payment" id="order-type3" class="form-control customSelect payment-preview payment_time">
+                <select name="payment_time" id="order-type3" class="form-control customSelect payment-preview payment_time">
                   <option value="later">لاحقا</option>
                   <option value="now">الان</option>
                 </select>
@@ -189,17 +182,17 @@
             <div class="col-sm-12 col-md-12 col-lg-12 payment_type_parent1">
                 <div class="form-group">
                   <label for="order-type3">  الدفع الان </label>
-                  <select name="is_payment_complete" id="order-type3" class="form-control customSelect payment-preview">
+                  <select name="payment_option" id="order-type3" class="form-control customSelect payment-preview">
                    <option value="">المبلغ كاملا</option>
                    <option value="">قيمة الحجز</option>
                   </select>
                 </div>
               </div>
-              
+
             <div class="col-sm-12 col-md-12 col-lg-12 payment_type_parent2">
               <div class="form-group">
                 <label for="order-type3"> طريقة الدفع </label>
-                <select name="payment_type" id="order-type3" class="form-control customSelect payment-preview">
+                <select name="payment_method" id="order-type3" class="form-control customSelect payment-preview">
                   <option >اختر طريقة الدفع</option>
                   <option value="0">الدفع بالمحفظة (فودافون - اورانج - اتصالات)</option>
                   <option value="1">فيزا</option>

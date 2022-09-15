@@ -30,10 +30,15 @@
         <div class="course_images">
           <div class="course_img">
             <div class="img_parent">
-              <img src="{{asset('assets/images/computer.jpg')}}" alt="">
+              <img src="{{$course->course_image}}" alt="">
             </div>
           </div>
-          <button class="btn"> <i class="fas fa-play"></i> <span>مشاهدة العرض</span> </button>
+          @if($course->video)
+          <a href="{{$course->video}}"  target="_blank" class="btn"> <i class="fas fa-play"></i> <span>مشاهدة العرض</span> </a>
+          @else
+          <a href="{{$course->youtube_link}}" target="_blank" class="btn"> <i class="fas fa-play"></i> <span>مشاهدة العرض</span> </a>
+
+          @endif
           <button href="{{url('course_reservation/'.$course->id)}}" class="btn btn_style"> <span>الاشتراك الآن</span> </button>
         </div>
 
@@ -99,7 +104,7 @@
             </div>
             <div class="card_body">
               <h5>{{$course->course_coach}}</h5>
-              <p>{{$course->course_coach_prief}} </p>
+              <p>{{$course->coach_info}} </p>
             </div>
           </div>
         </div>

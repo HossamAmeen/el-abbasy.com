@@ -10,12 +10,12 @@ class CourseController extends Controller
     function index($course_id = null){
         if($course_id){
             $course = Course::findOrFail($course_id);
-            $courses = Course::where('course_status', 'course')->where("id", "!=",$course_id)->limit(3)->get();
+            $courses = Course::where('course_type', 'course')->where("id", "!=",$course_id)->limit(3)->get();
             return view('course_detail', compact('course', 'courses'));
         }
        
-        $courses = Course::where('course_status', 'course');
-        $trainings = Course::where('course_status', 'training');
+        $courses = Course::where('course_type', 'course');
+        $trainings = Course::where('course_type', 'training');
         if(request('name')){
             // return ":"
             $courses = $courses->where('course_name','like', '%'. request('name') .'%' );
