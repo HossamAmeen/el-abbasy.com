@@ -17,7 +17,12 @@ class Course extends Model
         'course_cost_before',
         'course_cost_after',
         'course_reservation_cost',
-        'coursr_title',
+        'coach_info',
         'course_image','video','course_type','specialty','youtube_link'];
+        
+        public function course_reservation()
+        {
+            return $this->belongsTo(CourseReservation::class);
+        }
 
 }
