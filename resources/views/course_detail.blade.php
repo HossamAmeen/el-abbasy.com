@@ -5,7 +5,7 @@
     use Illuminate\Support\Facades\App;
     $locale = App::currentLocale();
     ?>
-<div class="breadcrumb" style="background-image: url('./assets/images/breadcrumb.png');">
+<div class="breadcrumb" style="background-image: url({{asset('assets/images/breadcrumb.png')}});">
   <h5 class="breadcrumb-content">معاينه الطلب</h5>
 </div>
 
@@ -34,7 +34,7 @@
             </div>
           </div>
           <button class="btn"> <i class="fas fa-play"></i> <span>مشاهدة العرض</span> </button>
-          <button href="{{url('join-course')}}" class="btn btn_style"> <span>الاشتراك الآن</span> </button>
+          <button href="{{url('course_reservation/'.$course->id)}}" class="btn btn_style"> <span>الاشتراك الآن</span> </button>
         </div>
 
         <div class="auther_courses">
@@ -60,7 +60,7 @@
                 </div>
                 <div class="btn_options">
                   <a href="{{url('courses/' . $item->id)}}" class="now">التفاصيل</a>
-                  <a href="{{url('join-course')}}" class="old">الحجز الان</a>
+                  <a href="{{url('course_reservation/'.$item->id)}}" class="old">الحجز الان</a>
                 </div>
               </div>
             </div>

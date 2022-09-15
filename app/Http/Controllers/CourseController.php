@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Course;
+use App\Models\{Course,CourseReservation};
 
 use Illuminate\Http\Request;
 
@@ -28,5 +28,18 @@ class CourseController extends Controller
         $courses = $courses->get();    
         $trainings = $trainings->get();
         return view('courses', compact("courses",'trainings'));
+    }
+
+    public function reservation(Request $request, $course_id=0)
+    {
+        $courses = Course::get();
+        if (request()->isMethod('post')) {
+            CourseReservation::create($request->all());
+            $success = 1;
+            return view("course_reservation", compact('courses','courses', 'success','course_id'));
+        }
+        
+        return view("course_reservation", compact('courses', 'course_id'));
+    
     }
 }

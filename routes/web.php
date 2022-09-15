@@ -113,7 +113,7 @@ Route::get('/joinUs', [\App\Http\Controllers\CareerFormsController::class,'index
 Route::post('/joinUs', [\App\Http\Controllers\CareerFormsController::class,'store']);
 
 Route::get('courses/{course_id?}', [\App\Http\Controllers\CourseController::class,'index']);
-Route::get('join-course', [\App\Http\Controllers\CourseController::class,'index']);
+Route::any('course_reservation/{course_id?}', [\App\Http\Controllers\CourseController::class,'reservation']);
 
 Route::post('/callback', [\App\Http\Controllers\PayMobController::class,'processedCallback']);
 Route::get('/response', [\App\Http\Controllers\PayMobController::class,'processedResponse']);
