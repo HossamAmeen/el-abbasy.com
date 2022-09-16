@@ -39,7 +39,7 @@
           <a href="{{$course->youtube_link}}" target="_blank" class="btn"> <i class="fas fa-play"></i> <span>مشاهدة العرض</span> </a>
 
           @endif
-          <button href="{{url('course_reservation/'.$course->id)}}" class="btn btn_style"> <span>الاشتراك الآن</span> </button>
+          <a href="{{url('course_reservation/'.$course->id)}}" class="btn btn_style"> <span>الاشتراك الآن</span> </a>
         </div>
 
         <div class="auther_courses">
