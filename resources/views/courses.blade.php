@@ -66,7 +66,7 @@
           <div class="train_course_box">
             <div class="card_img">
               <div class="img_wrapper">
-                <img src="{{asset("storage".$item->course_image)}}">
+                <img src="{{asset("storage/".$item->course_image)}}">
               </div>
             </div>
             <div class="card_body">
@@ -98,7 +98,7 @@
             <div class="train_course_box">
               <div class="card_img">
                 <div class="img_wrapper">
-                  <img src="{{asset("storage".$item->course_image)}}" alt="{{$item->course_name}}">
+                  <img src="{{asset("storage/".$item->course_image)}}" alt="{{$item->course_name}}">
                 </div>
               </div>
               <div class="card_body">
