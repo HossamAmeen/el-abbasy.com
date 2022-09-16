@@ -1,0 +1,1 @@
+[14-Sep-2022 15:45:37 Africa/Cairo] PHP Fatal error:  Cannot redeclare App\Models\Training::$disable_export in /home1/elabbasy/public_html/app/Models/Training.php on line 17

@@ -322,6 +322,28 @@ $(document).ready(function () {
             slidesToShow: 1,
         });
     }
+    
+    
+    
+    if ($(".payment_time_meth").length) {
+      $(".payment_time_meth").on('change', function () {
+        let payment_value = $(this).val();
+        if (payment_value == "now") {
+          // payment_value
+          $(this).parent().parent().next('.payment_type_parent').slideDown();
+          $(this).closest(".academe_rigister").find('.payment_type_parent1').slideDown();
+          $(this).closest(".academe_rigister").find('.payment_type_parent2').slideDown();
+        } else if (payment_value == "later") {
+          // payment_value
+          $(this).parent().parent().next('.payment_type_parent').slideUp();
+          $(this).closest(".academe_rigister").find('.payment_type_parent1').slideUp();
+          $(this).closest(".academe_rigister").find('.payment_type_parent2').slideUp();
+        }
+      })
+    }
+    
+    
+    
 
     $("#order-type").change(function () {
         $selected_value = $("#order-type option:selected").val();
