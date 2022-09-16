@@ -16,9 +16,9 @@
     <ul class="list-unstyled">
       <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
       <li><a href=""><i class="fab fa-twitter"></i></a></li>
-      <li><a href=""><i class="fab fa-instagram"></i></a></li>
+      <!--<li><a href=""><i class="fab fa-instagram"></i></a></li>-->
       <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
-      <li><a href=""><i class="fas fa-envelope"></i></a></li>
+      <!--<li><a href=""><i class="fas fa-envelope"></i></a></li>-->
       <li><a href=""><i class="fas fa-phone-alt"></i></a></li>
       <li><a href=""><i class="fas fa-map-marker-alt"></i></a></li>
     </ul>
@@ -99,7 +99,7 @@
           <div class="triner">
             <div class="card_img">
               <div class="img_parent">
-                <img src="{{asset($course->coach_image)}}" alt="">
+                <img src="{{asset('assets/images/avatar.webp')}}" alt="">
               </div>
             </div>
             <div class="card_body">

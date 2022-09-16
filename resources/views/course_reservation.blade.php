@@ -8,7 +8,7 @@
     ?>
  <style>
     .payment_type_parent1, .payment_type_parent2{
-      /* display: none; */
+       display: none; 
     }
   </style>
 <div class="breadcrumb" style="background-image: url({{asset('assets/images/breadcrumb.png')}});">
@@ -172,7 +172,7 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="form-group">
                 <label for="order-type3">الدفع</label>
-                <select name="payment_time" id="order-type3" class="form-control customSelect payment-preview payment_time">
+                <select name="payment_time" id="order-type3" class="form-control customSelect payment-preview payment_time_meth">
                   <option value="later">لاحقا</option>
                   <option value="now">الان</option>
                 </select>
@@ -213,22 +213,4 @@
   </div>
   </div>
 
-  <script>
-    if ($(".payment_time").length) {
-      $(".payment_time").on('change', function () {
-        let payment_value = $(this).val();
-        if (payment_value == "now") {
-          // payment_value
-          $(this).parent().parent().next('.payment_type_parent').slideDown();
-          $(this).closest(".academe_rigister").find('.payment_type_parent1').slideDown();
-          $(this).closest(".academe_rigister").find('.payment_type_parent2').slideDown();
-        } else if (payment_value == "later") {
-          // payment_value
-          $(this).parent().parent().next('.payment_type_parent').slideUp();
-          $(this).closest(".academe_rigister").find('.payment_type_parent1').slideUp();
-          $(this).closest(".academe_rigister").find('.payment_type_parent2').slideUp();
-        }
-      })
-    }
-  </script>
 @endsection
