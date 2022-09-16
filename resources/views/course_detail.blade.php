@@ -53,7 +53,7 @@
             <div class="train_course_box">
               <div class="card_img">
                 <div class="img_wrapper">
-                  <img src="{{$item->course_image}}">
+                  <img src="{{asset($item->course_image)}}">
                 </div>
               </div>
               <div class="card_body">
