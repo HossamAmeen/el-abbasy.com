@@ -19,7 +19,7 @@ class CourseController extends Controller
         if(request('name')){
             // return ":"
             $courses = $courses->where('course_name','like', '%'. request('name') .'%' );
-            $trainings = $trainings->where('specialty','like', '%'. request('name') .'%' );
+            $trainings = $trainings->where('course_name','like', '%'. request('name') .'%' );
         }
         if(request('specialty')){
             $courses = $courses->where('specialty','like', '%'. request('specialty') .'%' );
@@ -32,14 +32,15 @@ class CourseController extends Controller
 
     public function reservation(Request $request, $course_id=0)
     {
+        $success = 0;
         $courses = Course::get();
         if (request()->isMethod('post')) {
             CourseReservation::create($request->all());
             $success = 1;
-            return view("course_reservation", compact('courses','courses', 'success','course_id'));
+            return view("course_reservation_message", compact('courses','courses', 'success','course_id'));
         }
         
-        return view("course_reservation", compact('courses', 'course_id'));
+        return view("course_reservation", compact('courses', 'success', 'course_id'));
     
     }
 }
