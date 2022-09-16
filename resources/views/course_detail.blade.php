@@ -30,7 +30,7 @@
         <div class="course_images">
           <div class="course_img">
             <div class="img_parent">
-              <img src="{{$course->course_image}}" alt="">
+              <img src="{{asset('storage/' . $course->course_image)}}" alt="">
             </div>
           </div>
           @if($course->video)
