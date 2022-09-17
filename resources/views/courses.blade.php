@@ -7,9 +7,11 @@
     $locale = App::currentLocale();
     ?>
 
+  
   <div class="breadcrumb" style="background-image: url({{asset('assets/images/breadcrumb.png')}});">
     <h5 class="breadcrumb-content">البرامج التدريبية</h5>
   </div>
+  
 
 
   <div class="training_cources">
