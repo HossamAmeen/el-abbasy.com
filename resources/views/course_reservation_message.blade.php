@@ -11,6 +11,14 @@
     display: none;
   }
 </style>
+<script>
+  swal({
+      title: "{{__('Thank you')}}",
+      text: "{{__('your message has been sent successfully')}}",
+      icon: "success",
+      button: "{{__('ok')}}",
+  });
+</script>
 <div class="breadcrumb" style="background-image: url({{asset('assets/images/breadcrumb.png')}});">
   <h5 class="breadcrumb-content">معاينه الطلب</h5>
 </div>
@@ -29,6 +37,7 @@
       <li><a href=""><i class="fas fa-map-marker-alt"></i></a></li>
     </ul>
   </div>
+
 
   <div class="container">
     <div class="message_box">
