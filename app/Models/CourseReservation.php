@@ -21,7 +21,7 @@ class CourseReservation extends Model
     'university',
     'favourite_time',
     'favourite_attendees',
-    'payment_time','payment_option','payment_method'
+    'payment_time','payment_option','payment_method','national_id'
 ];
     
 }

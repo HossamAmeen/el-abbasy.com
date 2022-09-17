@@ -100,6 +100,8 @@
                 <label for="IDnumber">رقم الهوية</label>
                 <input type="text" name="national_id" id="IDnumber" placeholder="يرجى ادخال رقم الهوية / جواز السفر لغير المصريين"
                   class="form-control" required>
+                <span class="note_number" style="color: red; font-size: 12px;">* يجب ن يكون الرقم باللغة الانجليزية</span>
+
               </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12">
@@ -108,6 +110,8 @@
                 <input type="text" name="phone_number" id="phoneNumber"
                   placeholder="يررج ادخال الهاتف مسبوقا برمز الدوله التابع لها - )00000 - 00000000000)"
                   class="form-control" required>
+                <span class="note_number" style="color: red; font-size: 12px;">* يجب ن يكون الرقم باللغة الانجليزية</span>
+
               </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12">
@@ -134,8 +138,12 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="form-group">
                 <label for="phoneNumber">التخصص</label>
-                <input type="text" name="specialty" id="phoneNumber" placeholder="يرجى ادخال التخصص بالدراسه "
-                  class="form-control" required>
+                 <select name="favourite_time" class="form-control customSelect" id="program" >
+                  <option >تخصص 1</option>
+                  <option >تخصص 2</option>
+                </select>
+                <!--<input type="text" name="specialty" id="phoneNumber" placeholder="يرجى ادخال التخصص بالدراسه "-->
+                <!--  class="form-control" required>-->
               </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12">

@@ -12,13 +12,11 @@ class Course extends Model
     public $translatable = [ 'course_name',
         'course_detail',
         'course_duration',
-        'course_status',
         'course_coach',
         'course_cost_before',
         'course_cost_after',
         'course_reservation_cost',
-        'coach_info',
-        'course_image','video','course_type','specialty','youtube_link'];
+        'coach_info','course_type',];
         
         public function course_reservation()
         {

@@ -38,10 +38,21 @@
           <div class="row">
             <div class="col-sm-12 col-md-6 col-lg-5">
               <div class="form-group">
-                <i class="fas fa-search icon"></i>
-                <input type="text" name="specialty" class="form-control" placeholder="التخصص">
+                <select name="" class="customSelect form-control" id="">
+                  <option value="" selected disabled>اختر التخصص</option>
+                  <option value="">عرض الكل</option>
+                  <option value="">التخصص الاول</option>
+                  <option value="">التخصص الثاني</option>
+                  <option value="">التخصص الثالث</option>
+                </select>
               </div>
             </div>
+            <!--<div class="col-sm-12 col-md-6 col-lg-5">-->
+            <!--  <div class="form-group">-->
+            <!--    <i class="fas fa-search icon"></i>-->
+            <!--    <input type="text" name="specialty" class="form-control" placeholder="التخصص">-->
+            <!--  </div>-->
+            <!--</div>-->
             <div class="col-sm-12 col-md-6 col-lg-5">
               <div class="form-group">
                 <i class="fas fa-search icon"></i>
