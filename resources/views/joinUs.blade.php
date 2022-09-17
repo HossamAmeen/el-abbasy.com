@@ -140,6 +140,8 @@ $locale = Config::get('app.locale');
                                 <label for="ID-number">{{__('National ID')}}</label>
                                 <input type="number" name="national_id" value="{{old('national_id')}}" id="ID-number"
                                        placeholder="{{__('National ID')}}" class="form-control">
+                                                       <span class="note_number" style="color: red; font-size: 12px;">* يجب ن يكون الرقم باللغة الانجليزية</span>
+
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-6">
@@ -147,6 +149,8 @@ $locale = Config::get('app.locale');
                                 <label for="phone-number">{{__('Phone number')}}</label>
                                 <input type="text" name="number" value="{{old('number')}}" id="phone-number"
                                        placeholder="{{__('Phone number')}}" class="form-control">
+                            <span class="note_number" style="color: red; font-size: 12px;">* يجب ن يكون الرقم باللغة الانجليزية</span>
+
                             </div>
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-6">
