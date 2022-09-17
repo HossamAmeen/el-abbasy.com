@@ -78,7 +78,7 @@ class PayMob
           'street' => 'NA',
           'floor' => 'NA',
           'city' => 'NA',
-          'phone_number' => $this->order->number,
+          'phone_number' => $this->order->number ? $this->order->number  : $this->order->phone_number ,
           'country' => 'NA',
           ],
          ]
