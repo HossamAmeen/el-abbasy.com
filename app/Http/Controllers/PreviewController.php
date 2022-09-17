@@ -24,7 +24,7 @@ class PreviewController extends Controller
 
     function index()
     {
-        return (env('API_KEY', 'asd'));
+
         $page = Page::where('model_name', 'preview_order')->get()->first();
         $page = $page->load('translations');
         $Governorates = Governorate::all();
