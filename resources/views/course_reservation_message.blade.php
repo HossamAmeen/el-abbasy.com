@@ -5,6 +5,20 @@
     use Illuminate\Support\Facades\App;
     $locale = App::currentLocale();
     ?>
+<style>
+  .payment_type_parent1,
+  .payment_type_parent2 {
+    display: none;
+  }
+</style>
+<script>
+  swal({
+      title: "{{__('Thank you')}}",
+      text: "{{__('your message has been sent successfully')}}",
+      icon: "success",
+      button: "{{__('ok')}}",
+  });
+</script>
   <style>
     @media print {
 
@@ -43,6 +57,7 @@
       <li><a href=""><i class="fas fa-map-marker-alt"></i></a></li>
     </ul>
   </div>
+
 
   <div class="container">
     <div class="message_box">

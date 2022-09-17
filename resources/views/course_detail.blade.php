@@ -33,10 +33,10 @@
               <img src="{{asset('storage/' . $course->course_image)}}" alt="">
             </div>
           </div>
-          @if($course->video)
-          <a href="{{$course->video}}"  target="_blank" class="btn"> <i class="fas fa-play"></i> <span>مشاهدة العرض</span> </a>
+          @if($course->youtube_link)
+          <a href="{{$course->youtube_link}}"  target="_blank" class="btn"> <i class="fas fa-play"></i> <span>مشاهدة العرض</span> </a>
           @else
-          <a href="{{$course->youtube_link}}" target="_blank" class="btn"> <i class="fas fa-play"></i> <span>مشاهدة العرض</span> </a>
+          <a href="{{$course->video}}" target="_blank" class="btn"> <i class="fas fa-play"></i> <span>مشاهدة العرض</span> </a>
 
           @endif
           <a href="{{url('course_reservation/'.$course->id)}}" class="btn btn_style"> <span>الاشتراك الآن</span> </a>
