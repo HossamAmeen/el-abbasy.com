@@ -192,12 +192,20 @@
             <div class="col-sm-12 col-md-12 col-lg-12 payment_type_parent2">
               <div class="form-group">
                 <label for="order-type3"> طريقة الدفع </label>
-                <select name="payment_method" id="order-type3" class="form-control customSelect payment-preview" >
+                <select name="payment_method" id="order-type3" class="form-control customSelect payment-preview num-preview-course" >
                   {{-- <option >اختر طريقة الدفع</option> --}}
-                  <option value="الدفع بالمحفظة">الدفع بالمحفظة (فودافون - اورانج - اتصالات)</option>
-                  <option value="فيزا">فيزا</option>
-                  <option value="الدفع بالتقسيط">الدفع بالتقسيط</option>
+                  <option data-attr="1" value="فيزا">فيزا</option>
+                  <option data-attr="0" value="الدفع بالمحفظة">الدفع بالمحفظة (فودافون - اورانج - اتصالات)</option>
+                  <option data-attr="2" value="الدفع بالتقسيط">الدفع بالتقسيط</option>
                 </select>
+              </div>
+            </div>
+            
+            <div class="col-sm-12 col-md-12 col-lg-12 phone-preview-course" style="display: none" >
+              <div class="form-group">
+                <label for="phone_number">رقم هاتف المحفظة</label>
+                <input type="phone_number" name="wallet_phone" value="" id="phone_number" placeholder="رقم هاتف المحفظة"
+                  class="form-control" required="required">
               </div>
             </div>
 

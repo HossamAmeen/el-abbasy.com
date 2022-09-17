@@ -57,11 +57,11 @@
                 </div>
               </div>
               <div class="card_body">
-                <h5>{{$item->course_name}}</h5>
-                <p>{{$item->course_detail}}</p>
+                <h5>{{$item->translate($locale)->course_name}}</h5>
+                <p>{!!$item->translate($locale)->course_detail!!}</p>
                 <div class="price">
-                  <span class="now">{{$item->course_cost_before}} ج.م</span>
-                  <span class="old">{{$item->course_cost_after}} ج.م</span>
+                  <span class="now">{{$item->translate($locale)->course_cost_before}} ج.م</span>
+                  <span class="old">{{$item->translate($locale)->course_cost_after}} ج.م</span>
                 </div>
                 <div class="btn_options">
                   <a href="{{url('courses/' . $item->id)}}" class="now">التفاصيل</a>
@@ -78,19 +78,19 @@
           <div class="info_data">
             <ul class="list-unstyled">
               <li>
-                <h5> <i class="fas fa-briefcase"></i> اسم الكورس</h5> <span>{{$course->course_name}}</span>
+                <h5> <i class="fas fa-briefcase"></i> اسم الكورس</h5> <span>{{$course->translate($locale)->course_name}}</span>
               </li>
               <li>
-                <h5> <i class="fas fa-money-bill"></i> السعر قبل</h5> <span class="discount">{{$course->course_cost_before}}</span>
+                <h5> <i class="fas fa-money-bill"></i> السعر قبل</h5> <span class="discount">{{$course->translate($locale)->course_cost_before}}</span>
               </li>
               <li>
-                <h5> <i class="fas fa-money-bill"></i> السعر بعد</h5> <span>{{$course->course_cost_after}}</span>
+                <h5> <i class="fas fa-money-bill"></i> السعر بعد</h5> <span>{{$course->translate($locale)->course_cost_after}}</span>
               </li>
               <li>
-                <h5> <i class="fas fa-clock"></i> مده الكورس</h5> <span>{{$course->course_duration}}</span>
+                <h5> <i class="fas fa-clock"></i> مده الكورس</h5> <span>{{$course->translate($locale)->course_duration}}</span>
               </li>
               <li>
-                <h5> <i class="fas fa-eye"></i> توافر الكورس</h5> <span>{{$course->course_status}}</span>
+                <h5> <i class="fas fa-eye"></i> توافر الكورس</h5> <span>{{$course->translate($locale)->course_status}}</span>
               </li>
             </ul>
           </div>
@@ -103,8 +103,8 @@
               </div>
             </div>
             <div class="card_body">
-              <h5>{{$course->course_coach}}</h5>
-              <p>{{$course->coach_info}} </p>
+              <h5>{{$course->translate($locale)->course_coach}}</h5>
+              <p>{{$course->translate($locale)->coach_info}} </p>
             </div>
           </div>
         </div>
@@ -112,9 +112,9 @@
         <div class="course_info">
           <div class="course_content">
             <h6 class="header">محتوى الكورس</h6>
-            {{$course->course_detail}}
+            {!!$course->translate($locale)->course_detail!!}
             {{-- <ul class="list-unstyled">
-             {{$course->course_detail}}
+             {{$course->translate($locale)->course_detail}}
             </ul> --}}
 
           </div>

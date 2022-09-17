@@ -8,7 +8,7 @@
     ?>
 
   <div class="breadcrumb" style="background-image: url({{asset('assets/images/breadcrumb.png')}});">
-    <h5 class="breadcrumb-content">معاينه الطلب</h5>
+    <h5 class="breadcrumb-content">البرامج التدريبية</h5>
   </div>
 
 
@@ -30,7 +30,7 @@
 
       <div class="secton-header">
         <h6>البرامج</h6>
-        <h5>التدريبة والكورسات</h5>
+        <h5>التدريبات والكورسات</h5>
       </div>
 
       <div class="train_course_filter">
@@ -70,11 +70,11 @@
               </div>
             </div>
             <div class="card_body">
-              <h5>{{$item->course_name}}</h5>
-              <p>{{$item->course_detail}}</p>
+              <h5>{{$item->translate($locale)->course_name}}</h5>
+              <p>{!!$item->translate($locale)->course_detail!!}</p>
               <div class="price">
-                <span class="now">{{$item->course_cost_before}} ج.م</span>
-                <span class="old">{{$item->course_cost_after}} ج.م</span>
+                <span class="now">{{$item->translate($locale)->course_cost_before}} ج.م</span>
+                <span class="old">{{$item->translate($locale)->course_cost_after}} ج.م</span>
               </div>
               <div class="btn_options">
                 <a href="{{url('courses/' . $item->id)}}" class="now">التفاصيل</a>
@@ -102,11 +102,11 @@
                 </div>
               </div>
               <div class="card_body">
-                <h5>{{$item->course_name}}</h5>
-                <p>{{$item->course_detail}}</p>
+                <h5>{{$item->translate($locale)->course_name}}</h5>
+                <p>{!!$item->translate($locale)->course_detail!!}</p>
                 <div class="price">
-                  <span class="now">{{$item->course_cost_before}} ج.م</span>
-                  <span class="old">{{$item->course_cost_after}} ج.م</span>
+                  <span class="now">{{$item->translate($locale)->course_cost_before}} ج.م</span>
+                  <span class="old">{{$item->translate($locale)->course_cost_after}} ج.م</span>
                 </div>
                 <div class="btn_options">
                   <a href="{{url('courses/' . $item->id)}}" class="now">التفاصيل</a>
