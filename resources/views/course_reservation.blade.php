@@ -138,9 +138,11 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="form-group">
                 <label for="phoneNumber">التخصص</label>
+                
                  <select name="favourite_time" class="form-control customSelect" id="program" >
-                  <option >تخصص 1</option>
-                  <option >تخصص 2</option>
+                  @foreach ($specialties as $item)
+                  <option >{{$item->name}}</option>
+                  @endforeach
                 </select>
                 <!--<input type="text" name="specialty" id="phoneNumber" placeholder="يرجى ادخال التخصص بالدراسه "-->
                 <!--  class="form-control" required>-->
@@ -212,7 +214,7 @@
             <div class="col-sm-12 col-md-12 col-lg-12 phone-preview-course" style="display: none" >
               <div class="form-group">
                 <label for="phone_number">رقم هاتف المحفظة</label>
-                <input type="phone_number" name="wallet_phone" value="" id="phone_number" placeholder="رقم هاتف المحفظة"
+                <input type="text" name="wallet_phone_number"  id="phone_number" placeholder="رقم هاتف المحفظة"
                   class="form-control" required="required">
               </div>
             </div>
