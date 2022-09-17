@@ -4011,7 +4011,10 @@ button:focus {
     border-radius: 5px;
     margin-top: 15px;
     margin-bottom: 15px;
-    min-height: 300px;
+    min-height: 450px;
+        display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .train_course_box .card_img {
@@ -4052,7 +4055,7 @@ button:focus {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 1;
+    -webkit-line-clamp: 2;
     /* number of lines to show */
     line-clamp: 1;
     -webkit-box-orient: vertical;
@@ -5503,6 +5506,45 @@ button:focus {
     color: #fff;
     border-radius: 5px;
 }
+
+
+.course_reservation_bill {
+  display: none;
+}
+
+.course_reservation_bill .wrapper {
+  width: 50%;
+  margin: auto;
+  border: 1px solid #eee;
+  padding: 20px;
+}
+
+.course_reservation_bill .wrapper h5 {
+  border-bottom: 1px solid rgba(207, 204, 204, 0.4);
+  padding: 10px 0;
+  margin: 20px 0;
+}
+
+.course_reservation_bill .wrapper ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 10px;
+}
+
+.course_reservation_bill .wrapper ul li .qust {
+  margin-left: 10px;
+}
+
+.training_cources .train_course_filter .nice-select::after {
+    left: 10px;
+    right: unset;
+}
+
+
 
 
 

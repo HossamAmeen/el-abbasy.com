@@ -56,6 +56,14 @@ $(document).ready(function () {
             $(".works_filter").removeClass('filtrt_open')
         })
     }*/
+    
+    
+    if($("").length){
+        $('.printMe').click(function () {
+          window.print();
+        }); 
+    }
+
 
     if ($(".new-work-detisl-slider").length) {
         $(".new-work-detisl-slider").slick({
@@ -445,6 +453,18 @@ $(document).ready(function () {
         } else {
             $(".phone-preview-package").hide(700);
             $(".phone-preview-package input").attr("required", false);
+        }
+    });
+    
+    
+     $(".num-preview-course").change(function () {
+        var val = $(".num-preview-course option:selected").attr("data-attr");
+        if (val == "0") {
+            $(".phone-preview-course").show(700);
+            $(".phone-preview-course input").attr("required", true);
+        } else {
+            $(".phone-preview-course").hide(700);
+            $(".phone-preview-course input").attr("required", false);
         }
     });
 
