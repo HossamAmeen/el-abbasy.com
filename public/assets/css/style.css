@@ -4274,6 +4274,7 @@ button:focus {
     width: 100%;
     padding: 10px 15px;
     padding-top: 15px;
+    height: auto !important;
 }
 
 .eeta_course_details .auther_courses .train_course_box {
@@ -4368,6 +4369,7 @@ button:focus {
     font-size: 1rem;
     border-bottom: 1px solid #ad84587a;
     padding-bottom: 10px;
+    height: auto !important;
 }
 
 .eeta_course_details .course_info .course_content ul {
