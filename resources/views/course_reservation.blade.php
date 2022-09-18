@@ -215,7 +215,7 @@
               <div class="form-group">
                 <label for="phone_number">رقم هاتف المحفظة</label>
                 <input type="text" name="wallet_phone_number"  id="phone_number" placeholder="رقم هاتف المحفظة"
-                  class="form-control" required="required">
+                  class="form-control" >
               </div>
             </div>
 
