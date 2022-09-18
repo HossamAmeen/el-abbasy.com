@@ -62,15 +62,15 @@
   <div class="container">
     <div class="message_box">
       <p>
-        تم استالم طلبكم بنجاح رقم : ...... وسيتم التواصل معكم ف 48 ساعه (
-          لطباعة او تحميل الفاتوره <a href="">الضغط هنا</a>
+        تم استالم طلبكم بنجاح رقم : ...... وسيتم التواصل معكم ف 48 ساعه 
+          {{-- لطباعة او تحميل الفاتوره <a href="">الضغط هنا</a> --}}
       </p>
     </div>
   </div>
 </div>
 
 
-  <div class="course_reservation_bill">
+  {{-- <div class="course_reservation_bill">
     <div class="container">
       <div class="wrapper">
         <h5> فاتورة مدفوعات الكترونية </h5>
@@ -85,7 +85,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </div> --}}
 
 
 @endsection
