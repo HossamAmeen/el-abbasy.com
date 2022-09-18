@@ -139,7 +139,7 @@
               <div class="form-group">
                 <label for="phoneNumber">التخصص</label>
                 
-                 <select name="favourite_time" class="form-control customSelect" id="program" >
+                 <select name="specialty" class="form-control customSelect" id="program" >
                   @foreach ($specialties as $item)
                   <option >{{$item->name}}</option>
                   @endforeach
