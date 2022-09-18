@@ -10,7 +10,7 @@ class CourseController extends Controller
 {
     function index($course_id = null){
         if($course_id){
-            $course = Course::where('id', $course_id)->where('is_active', true);
+            $course = Course::where('id', $course_id)->where('is_active', true)->get();
             $courses = Course::where('course_type', 'course')->where("id", "!=",$course_id)->limit(3)->get();
             return view('course_detail', compact('course', 'courses'));
         }
