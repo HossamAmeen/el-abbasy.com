@@ -11,7 +11,9 @@ class CourseController extends Controller
     function index($course_id = null){
         if($course_id){
             $course = Course::where('id', $course_id)->where('is_active', true)->first();
-            $courses = Course::where('course_type', 'course')->where("id", "!=",$course_id)->limit(3)->get();
+            $courses = Course::where('course_type', $course->course_type)
+                               ->where('specialty_id', $course->specialty_id)->where('is_active', true)
+                               ->where("id", "!=",$course_id)->limit(3)->get();
             return view('course_detail', compact('course', 'courses'));
         }
         $specialties = Specialty::get();
@@ -35,9 +37,10 @@ class CourseController extends Controller
     {
         $success = 0;
         $specialties = Specialty::get();
+        $course = Course::findOrFail(request('course_id'));
         if (request()->isMethod('post')) {
             $course_reservation = CourseReservation::create($request->all());
-            $course = Course::findOrFail(request('course_id'));
+            
             $success = 1;
             if($course_reservation->save())
             {
@@ -77,11 +80,24 @@ class CourseController extends Controller
             
         }
         $courses = Course::get();
-        return view("course_reservation", compact('courses', 'success', 'course_id','specialties'));
+        return view("course_reservation", compact('courses', 'success','course', 'course_id','specialties'));
     
     }
 
     function ArabicNumbersToEnglish($string) {
         return strtr($string, array('۰' => '0', '۱' => '1', '۲' => '2', '۳' => '3', '۴' => '4', '۵' => '5', '۶' => '6', '۷' => '7', '۸' => '8', '۹' => '9', '٠' => '0', '١' => '1', '٢' => '2', '٣' => '3', '٤' => '4', '٥' => '5', '٦' => '6', '٧' => '7', '٨' => '8', '٩' => '9'));
+    }
+
+    function getCoursePrice($id)
+    {
+        $course = Course::where('id', $id)->first();
+        $price = $course->course_cost_after;
+        $course_cost_before = $course->course_cost_before;
+        return response()->json([
+            'Price' => $price,
+            'OldPrice' => $course_cost_before,
+            'Status' => 1
+
+        ]);
     }
 }

@@ -16,7 +16,7 @@
 
   <div class="training_cources">
 
-    <div class="eeta_academy_social">
+    {{-- <div class="eeta_academy_social">
       <ul class="list-unstyled">
         <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
         <li><a href=""><i class="fab fa-twitter"></i></a></li>
@@ -26,7 +26,7 @@
         <li><a href=""><i class="fas fa-phone-alt"></i></a></li>
         <li><a href=""><i class="fas fa-map-marker-alt"></i></a></li>
       </ul>
-    </div>
+    </div> --}}
 
     <div class="container">
 
@@ -81,8 +81,8 @@
               <h5>{{$item->translate($locale)->course_name}}</h5>
               <p>{!!$item->translate($locale)->course_detail!!}</p>
               <div class="price">
-                <span class="now">{{$item->translate($locale)->course_cost_before}} ج.م</span>
-                <span class="old">{{$item->translate($locale)->course_cost_after}} ج.م</span>
+                <span class="now">{{$item->translate($locale)->course_cost_after}} ج.م</span>
+                <span class="old">{{$item->translate($locale)->course_cost_before}} ج.م</span>
               </div>
               <div class="btn_options">
                 <a href="{{url('courses/' . $item->id)}}" class="now">التفاصيل</a>
@@ -113,8 +113,8 @@
                 <h5>{{$item->translate($locale)->course_name}}</h5>
                 <p>{!!$item->translate($locale)->course_detail!!}</p>
                 <div class="price">
-                  <span class="now">{{$item->translate($locale)->course_cost_before}} ج.م</span>
-                  <span class="old">{{$item->translate($locale)->course_cost_after}} ج.م</span>
+                  <span class="now">{{$item->translate($locale)->course_cost_after}} ج.م</span>
+                  <span class="old">{{$item->translate($locale)->course_cost_before}} ج.م</span>
                 </div>
                 <div class="btn_options">
                   <a href="{{url('courses/' . $item->id)}}" class="now">التفاصيل</a>

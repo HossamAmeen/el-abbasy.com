@@ -410,10 +410,31 @@ $(document).ready(function () {
         });
     }
 
+    function UpdatePriceCourse(id) {
+        $.ajax({
+            type: "GET",
+            dataType: "json",
+            url: "/course-price/" + id,
+            success: function (data) {
+                if (data.Status == "1") {
+                    $("#pricenum").text(data.Price);
+                    $("#priceinput").val(data.Price);
+                    $("#oldprice").text(data.OldPrice);
+                }
+            },
+        });
+    }
+
     $(".order-type-package").on("change", function () {
         var id = $(".order-type-package option:selected").val();
         UpdatePricePackage(id);
     });
+
+    $(".course_select").on("change", function () {
+        var id = $(".course_select option:selected").val();
+        UpdatePriceCourse(id);
+    });
+
 
     $(".select0").on("change", function () {
         var id = $(".select0 option:selected").val();

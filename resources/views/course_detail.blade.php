@@ -14,10 +14,11 @@
 
   <div class="eeta_academy_social">
     <ul class="list-unstyled">
-      <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
-      <li><a href=""><i class="fab fa-twitter"></i></a></li>
+      <?php $url = Request::url() ?>
+      <li><a href="http://www.facebook.com/sharer.php?u={{$url}}"><i class="fab fa-facebook-f"></i></a></li>
+      <li><a  href="http://twitter.com/share?url={{$url}}"><i class="fab fa-twitter"></i></a></li>
       <!--<li><a href=""><i class="fab fa-instagram"></i></a></li>-->
-      <li><a href=""><i class="fab fa-whatsapp"></i></a></li>
+      <li><a href="https://api.whatsapp.com/send?text={{$url}}"><i class="fab fa-whatsapp"></i></a></li>
       <!--<li><a href=""><i class="fas fa-envelope"></i></a></li>-->
       <li><a href=""><i class="fas fa-phone-alt"></i></a></li>
       <li><a href=""><i class="fas fa-map-marker-alt"></i></a></li>
@@ -36,10 +37,20 @@
           @if($course->youtube_link)
           <a href="{{$course->youtube_link}}"  target="_blank" class="btn"> <i class="fas fa-play"></i> <span>مشاهدة العرض</span> </a>
           @else
-          <a href="{{$course->video}}" target="_blank" class="btn"> <i class="fas fa-play"></i> <span>مشاهدة العرض</span> </a>
-
+          <?php
+          $video_content ="";
+          $explode_video_content = json_decode($course->video, true);
+          if(!empty($explode_video_content)&& $course->video != null) {
+              $video_content = $explode_video_content[0]['download_link'];
+          }
+          ?>
+          @if($video_content != "")
+          <a href="{{ Voyager::image($video_content) }}" data-fancybox="gallery" rel="group1" class="btn"> <i class="fas fa-play"></i> <span>مشاهدة العرض</span> </a>
           @endif
-          <a href="{{url('course_reservation/'.$course->id)}}" class="btn btn_style"> <span>الاشتراك الآن</span> </a>
+          
+            
+          @endif
+          <a href="{{url('course_reservation/'.$course->id)}}" class="btn btn_style"> <span>ا لاشتراك الآن</span> </a>
         </div>
 
         <div class="auther_courses">
@@ -87,6 +98,9 @@
                 <h5> <i class="fas fa-money-bill"></i> السعر بعد</h5> <span>{{$course->translate($locale)->course_cost_after}}</span>
               </li>
               <li>
+                <h5> <i class="fas fa-money-bill"></i> سعر الحجز </h5> <span>{{$course->translate($locale)->course_reservation_cost }}</span>
+              </li>
+              <li>
                 <h5> <i class="fas fa-clock"></i> مده الكورس</h5> <span>{{$course->translate($locale)->course_duration}}</span>
               </li>
               <li>
@@ -113,6 +127,16 @@
           <div class="course_content">
             <h6 class="header">محتوى الكورس</h6>
             {!!$course->translate($locale)->course_detail!!}
+            {{-- <ul class="list-unstyled">
+             {{$course->translate($locale)->course_detail}}
+            </ul> --}}
+
+          </div>
+        </div>
+        <div class="course_info">
+          <div class="course_content">
+            <h6 class="header">نقاط الشرح الكورس</h6>
+            {!!$course->translate($locale)->explain_points!!}
             {{-- <ul class="list-unstyled">
              {{$course->translate($locale)->course_detail}}
             </ul> --}}

@@ -68,10 +68,13 @@
         <form action="{{url('course_reservation/'.$course_id)}}" method="POST">
             @csrf
           <div class="row">
+
+          
+          
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="form-group">
                 <label for="program">البرنامج التدريبي</label>
-                <select name="course_id" class="form-control customSelect" id="program" required>
+                <select name="course_id" class="form-control customSelect course_select" id="program" required>
 
                   {{-- <option  selected disabled>يرجى اختيار البرنامج التدريبي</option> --}}
                   @foreach ($courses as $item)
@@ -80,6 +83,8 @@
                 </select>
               </div>
             </div>
+
+
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="form-group">
                 <label for="name">الاسم</label>
@@ -224,7 +229,7 @@
             
             <div class="col-sm-12 col-md-12 col-lg-12">
                 <div class="cost">
-                    <h5>  {{ __('Please pay an amount') }}<span id="pricenum" class="cost_price">0 <span>ج</span></span>{{ __('pound_and_old_price')}}<span id="oldprice" class="disount">0<span>{{__('EGP')}}</span></span> </h5>
+                    <h5>  {{ __('Please pay an amount') }}<span id="pricenum" class="cost_price">@if(isset($course) ) {{$course->course_cost_after}} @endif <span>ج</span></span>{{ __('pound_and_old_price')}}<span id="oldprice" class="disount">@if(isset($course) ) {{$course->course_cost_before}} @endif <span>{{__('EGP')}}</span></span> </h5>
                 </div>
                 <input name="price" id="priceinput" value="{{old('price')}}" type="hidden">
             </div>
