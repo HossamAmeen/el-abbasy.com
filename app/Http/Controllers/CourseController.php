@@ -47,11 +47,13 @@ class CourseController extends Controller
                 else {
                     $payment_method_key = PaymentMethod::fromValue((int)request('payment_method'))->key;
                    
-                    if( request('payment_option') == "المبلغ كاملا")
+                    if( request('payment_option') == "1")
                         $price = $course->course_cost_after ;
                     else{
                         $price = $course->course_reservation_cost ;
                     }
+                    
+                    
                     if ($payment_method_key == 'visa') {
                         $payment = new Payment($course_reservation, $price, (int)request('payment_method'));
                         return $payment->createVisaPayment();
@@ -64,6 +66,11 @@ class CourseController extends Controller
                         $payment = new Payment($course_reservation, $price, (int)request('payment_method'));
                         return $payment->createInstallmentPayment();
                     }
+                    
+                    
+                    
+                
+                
                 }
                
             }

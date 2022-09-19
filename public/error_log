@@ -1,1 +1,121 @@
 [14-Sep-2022 15:45:37 Africa/Cairo] PHP Fatal error:  Cannot redeclare App\Models\Training::$disable_export in /home1/elabbasy/public_html/app/Models/Training.php on line 17
+[19-Sep-2022 12:50:19 Africa/Cairo] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('view')
+#1 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('view')
+#2 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve('view', Array, true)
+#3 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make('view', Array)
+#5 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container. in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879
+[19-Sep-2022 12:53:28 Africa/Cairo] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('view')
+#1 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('view')
+#2 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve('view', Array, true)
+#3 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make('view', Array)
+#5 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container. in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879
+[19-Sep-2022 12:53:38 Africa/Cairo] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('view')
+#1 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('view')
+#2 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve('view', Array, true)
+#3 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make('view', Array)
+#5 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container. in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879
+[19-Sep-2022 12:53:58 Africa/Cairo] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('view')
+#1 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('view')
+#2 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve('view', Array, true)
+#3 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make('view', Array)
+#5 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container. in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879
+[19-Sep-2022 12:54:37 Africa/Cairo] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('view')
+#1 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('view')
+#2 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve('view', Array, true)
+#3 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make('view', Array)
+#5 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container. in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879
+[19-Sep-2022 12:54:38 Africa/Cairo] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('view')
+#1 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('view')
+#2 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve('view', Array, true)
+#3 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make('view', Array)
+#5 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container. in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879
+[19-Sep-2022 12:54:39 Africa/Cairo] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('view')
+#1 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('view')
+#2 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve('view', Array, true)
+#3 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make('view', Array)
+#5 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container. in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879
+[19-Sep-2022 12:54:41 Africa/Cairo] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('view')
+#1 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('view')
+#2 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve('view', Array, true)
+#3 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make('view', Array)
+#5 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container. in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879
+[19-Sep-2022 12:54:41 Africa/Cairo] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('view')
+#1 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('view')
+#2 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve('view', Array, true)
+#3 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make('view', Array)
+#5 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container. in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879
+[19-Sep-2022 12:54:51 Africa/Cairo] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('view')
+#1 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('view')
+#2 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve('view', Array, true)
+#3 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make('view', Array)
+#5 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container. in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879
+[19-Sep-2022 12:55:13 Africa/Cairo] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('view')
+#1 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('view')
+#2 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve('view', Array, true)
+#3 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make('view', Array)
+#5 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container. in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879
+[19-Sep-2022 12:55:16 Africa/Cairo] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('view')
+#1 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('view')
+#2 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve('view', Array, true)
+#3 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make('view', Array)
+#5 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container. in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879
+[19-Sep-2022 12:55:27 Africa/Cairo] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('view')
+#1 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('view')
+#2 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve('view', Array, true)
+#3 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make('view', Array)
+#5 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container. in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879
+[19-Sep-2022 12:55:30 Africa/Cairo] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('view')
+#1 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('view')
+#2 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve('view', Array, true)
+#3 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make('view', Array)
+#5 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container. in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879
+[19-Sep-2022 12:55:39 Africa/Cairo] PHP Fatal error:  Uncaught ReflectionException: Class view does not exist in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php:877
+Stack trace:
+#0 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(877): ReflectionClass->__construct('view')
+#1 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(758): Illuminate\Container\Container->build('view')
+#2 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(841): Illuminate\Container\Container->resolve('view', Array, true)
+#3 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php(694): Illuminate\Foundation\Application->resolve('view', Array)
+#4 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(826): Illuminate\Container\Container->make('view', Array)
+#5 /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container. in /home1/elabbasy/public_html/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 879

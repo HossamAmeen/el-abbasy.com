@@ -125,13 +125,13 @@
                 <label for="program">الدرجه العلميه</label>
                 <select name="degree" class="form-control customSelect" id="program" >
                   {{-- <option  selected disabled>يرجى اختيار الدرجه العلميه</option> --}}
-                  <option >طالب</option>
-                  <option >متوسط</option>
-                  <option >فوق متوسط</option>
-                  <option >ليسانس</option>
-                  <option >بكارليوس</option>
-                  <option >ماجيستير</option>
-                  <option >دكتوراه</option>
+                  <option value="طالب">طالب</option>
+                  <option  value="متوسط">متوسط</option>
+                  <option  value="فوق متوسط">فوق متوسط</option>
+                  <option  value="ليسانس">ليسانس</option>
+                  <option  value="بكارليوس">بكارليوس</option>
+                  <option  value="ماجيستير">ماجيستير</option>
+                  <option  value="دكتوراه">دكتوراه</option>
                 </select>
               </div>
             </div>
@@ -164,8 +164,8 @@
               <div class="form-group">
                 <label for="phoneNumber">الوقت المفضل </label>
                 <select name="favourite_time" class="form-control customSelect" id="program" >
-                  <option >صباحي</option>
-                  <option >مسائي</option>
+                  <option value="صباحي">صباحي</option>
+                  <option value="مسائي">مسائي</option>
                 </select>
               </div>
             </div>
@@ -173,8 +173,8 @@
               <div class="form-group">
                 <label for="phoneNumber">الحضور المفضل</label>
                 <select name="favourite_attendees" class="form-control customSelect" id="program" >
-                  <option >عن بعد</option>
-                  <option >لحضور باحد مراكز التدريب</option>
+                  <option value="عن بعد">عن بعد</option>
+                  <option value="لحضور باحد مراكز التدريب">لحضور باحد مراكز التدريب</option>
                 </select>
               </div>
             </div>
@@ -193,20 +193,22 @@
                 <div class="form-group">
                   <label for="order-type3">  الدفع الان </label>
                   <select name="payment_option" id="order-type3" class="form-control customSelect payment-preview" >
-                   <option >المبلغ كاملا</option>
-                   <option >قيمة الحجز</option>
+                   <option value="1">المبلغ كاملا</option>
+                   <option value="2">قيمة الحجز</option>
                   </select>
                 </div>
-              </div>
+             </div>
 
             <div class="col-sm-12 col-md-12 col-lg-12 payment_type_parent2">
               <div class="form-group">
                 <label for="order-type3"> طريقة الدفع </label>
                 <select name="payment_method" id="order-type3" class="form-control customSelect payment-preview num-preview-course" >
-                  {{-- <option >اختر طريقة الدفع</option> --}}
-                  <option data-attr="1" value="فيزا">فيزا</option>
-                  <option data-attr="0" value="الدفع بالمحفظة">الدفع بالمحفظة (فودافون - اورانج - اتصالات)</option>
-                  <option data-attr="2" value="الدفع بالتقسيط">الدفع بالتقسيط</option>
+                  {{-- <option value="">اختر طريقة الدفع</option> --}}
+                  <option data-attr="1" value="1">فيزا</option>
+                  <option data-attr="0" value="0">
+                      الدفع بالمحفظة (فودافون - اورانج - اتصالات)</option>
+                  <option data-attr="2" value="3">الدفع بالتقسيط</option>
+                   
                 </select>
               </div>
             </div>
@@ -217,6 +219,14 @@
                 <input type="text" name="wallet_phone_number"  id="phone_number" placeholder="رقم هاتف المحفظة"
                   class="form-control" >
               </div>
+            </div>
+            
+            
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="cost">
+                    <h5>  {{ __('Please pay an amount') }}<span id="pricenum" class="cost_price">0 <span>ج</span></span>{{ __('pound_and_old_price')}}<span id="oldprice" class="disount">0<span>{{__('EGP')}}</span></span> </h5>
+                </div>
+                <input name="price" id="priceinput" value="{{old('price')}}" type="hidden">
             </div>
 
             <div class="col-sm-12 col-lg-12">

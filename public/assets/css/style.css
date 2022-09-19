@@ -3777,7 +3777,35 @@ input[type=number] {
     border-radius: 3px;
 }
 
+
+
 .quta_applay .cost .disount {
+    text-decoration: line-through;
+}
+
+
+.academe_rigister h5{
+    font-size: 1rem !important;
+}
+
+.academe_rigister .cost{
+    margin-top: 15px;
+    background: #eee;
+    padding: 15px;
+    border-radius: 5px;
+    padding-top: 25px;
+}
+
+
+.academe_rigister .cost .cost_price {
+    background-color: #ad8458;
+    padding: 1px 10px;
+    padding-top: 6px;
+    border-radius: 3px;
+    color: #fff;
+}
+
+.academe_rigister .cost .disount {
     text-decoration: line-through;
 }
 
@@ -4059,6 +4087,8 @@ button:focus {
     /* number of lines to show */
     line-clamp: 1;
     -webkit-box-orient: vertical;
+    color: #ad8458;
+    line-height: 23px;
 }
 
 .train_course_box .card_body p {
