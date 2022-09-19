@@ -114,7 +114,7 @@ Route::post('/joinUs', [\App\Http\Controllers\CareerFormsController::class,'stor
 
 Route::get('courses/{course_id?}', [\App\Http\Controllers\CourseController::class,'index']);
 Route::any('course_reservation/{course_id?}', [\App\Http\Controllers\CourseController::class,'reservation']);
-Route::get('/course-price/{id}', [\App\Http\Controllers\CourseController::class,'getCoursePrice']);
+Route::get('/course-price/{id}/{payment_type}g', [\App\Http\Controllers\CourseController::class,'getCoursePrice']);
 
 
 Route::post('/callback', [\App\Http\Controllers\PayMobController::class,'processedCallback']);

@@ -92,13 +92,13 @@
                 <h5> <i class="fas fa-briefcase"></i> اسم الكورس</h5> <span>{{$course->translate($locale)->course_name}}</span>
               </li>
               <li>
-                <h5> <i class="fas fa-money-bill"></i> السعر قبل</h5> <span class="discount">{{$course->translate($locale)->course_cost_before}}</span>
+                <h5> <i class="fas fa-money-bill"></i> السعر قبل</h5> <span class="discount">{{$course->course_cost_before}}</span>
               </li>
               <li>
-                <h5> <i class="fas fa-money-bill"></i> السعر بعد</h5> <span>{{$course->translate($locale)->course_cost_after}}</span>
+                <h5> <i class="fas fa-money-bill"></i> السعر بعد</h5> <span>{{$course->course_cost_after}}</span>
               </li>
               <li>
-                <h5> <i class="fas fa-money-bill"></i> سعر الحجز </h5> <span>{{$course->translate($locale)->course_reservation_cost }}</span>
+                <h5> <i class="fas fa-money-bill"></i> سعر الحجز </h5> <span>{{$course->course_reservation_cost }}</span>
               </li>
               <li>
                 <h5> <i class="fas fa-clock"></i> مده الكورس</h5> <span>{{$course->translate($locale)->course_duration}}</span>

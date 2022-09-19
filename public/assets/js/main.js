@@ -410,11 +410,11 @@ $(document).ready(function () {
         });
     }
 
-    function UpdatePriceCourse(id) {
+    function UpdatePriceCourse(id, payment_type = 1) {
         $.ajax({
             type: "GET",
             dataType: "json",
-            url: "/course-price/" + id,
+            url: "/course-price/" + id + "/" + payment_type,
             success: function (data) {
                 if (data.Status == "1") {
                     $("#pricenum").text(data.Price);
@@ -430,6 +430,12 @@ $(document).ready(function () {
         UpdatePricePackage(id);
     });
 
+    $(".payment_option").on("change", function () {
+        var id = $(".course_select option:selected").val();
+        var payment_type = $(".payment_option option:selected").val();
+        UpdatePriceCourse(id, payment_type);
+    });
+    
     $(".course_select").on("change", function () {
         var id = $(".course_select option:selected").val();
         UpdatePriceCourse(id);

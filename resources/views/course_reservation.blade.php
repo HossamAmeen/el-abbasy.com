@@ -197,7 +197,7 @@
             <div class="col-sm-12 col-md-12 col-lg-12 payment_type_parent1">
                 <div class="form-group">
                   <label for="order-type3">  الدفع الان </label>
-                  <select name="payment_option" id="order-type3" class="form-control customSelect payment-preview" >
+                  <select name="payment_option" id="order-type3" class="form-control customSelect payment-preview payment_option" >
                    <option value="1">المبلغ كاملا</option>
                    <option value="2">قيمة الحجز</option>
                   </select>
