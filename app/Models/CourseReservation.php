@@ -23,5 +23,7 @@ class CourseReservation extends Model
     'favourite_attendees',
     'payment_time','payment_option','payment_method','national_id'
 ];
-    
+public function course(){
+    return $this->belongsTo(Course::class);
+}
 }

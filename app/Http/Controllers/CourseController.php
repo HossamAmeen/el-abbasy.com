@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\{Course,CourseReservation,Specialty};
+use App\Models\{Course,CourseReservation,Specialty,Invoice};
 use App\Http\Payment;
 use App\Enums\PaymentMethod;
 use Illuminate\Http\Request;
@@ -45,7 +45,7 @@ class CourseController extends Controller
             if($course_reservation->save())
             {
                 if (request('payment_time') == 'later') {
-                    return view("course_reservation_message", compact('success'));
+                    return view("course_reservation_message", compact('success', 'course_reservation'));
                 }
                 else {
                     $payment_method_key = PaymentMethod::fromValue((int)request('payment_method'))->key;
@@ -84,6 +84,26 @@ class CourseController extends Controller
     
     }
 
+    public function reservation_bill($course_reservation_id)
+    {
+        $success = request('success');
+        $course_reservation = CourseReservation::find($course_reservation_id);
+        if($course_reservation->payment_option == 1)
+            $cost = $course_reservation->course->course_cost_after;
+        else
+            $cost = $course_reservation->course->course_reservation_cost;
+        $invoice = Invoice::create([
+            'invoice_number'=>rand(1000,100000),
+            'mobile_number'=>$course_reservation->phone_number,
+            'invoice_date'=>$course_reservation->created_at->format("Y-m-d"),
+            'invoice_time'=>$course_reservation->created_at->format('h:m:s'),
+            'cost'=>$cost,
+            'name'=>$course_reservation->name,
+            'details'=>$course_reservation->course->course_name,
+
+        ]);
+        return view("course_reservation_message", compact('success', 'course_reservation','invoice'));
+    }
     function ArabicNumbersToEnglish($string) {
         return strtr($string, array('۰' => '0', '۱' => '1', '۲' => '2', '۳' => '3', '۴' => '4', '۵' => '5', '۶' => '6', '۷' => '7', '۸' => '8', '۹' => '9', '٠' => '0', '١' => '1', '٢' => '2', '٣' => '3', '٤' => '4', '٥' => '5', '٦' => '6', '٧' => '7', '٨' => '8', '٩' => '9'));
     }
