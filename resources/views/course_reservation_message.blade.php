@@ -39,9 +39,24 @@
       }
     }
   </style>
-<div class="breadcrumb" style="background-image: url({{asset('assets/images/breadcrumb.png')}});">
-  <h5 class="breadcrumb-content">معاينه الطلب</h5>
-</div>
+ 
+
+  <div class="breadcrumb " style="position: relative;">
+        <div class="img_parent">
+            @if($video != "")
+                <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="">
+                    <source src="{{ Voyager::image($video) }}" type="video/mp4">
+                </video>
+            @else
+                <img src="{{ Voyager::image($page->image) }}">
+            @endif
+        </div>
+        <h5 class="breadcrumb-content">{{$page->translate($locale)->title}}</h5>
+        <ul class="list-unstyled">
+            <li><a href="/home">{{__('Home')}}</a></li>
+            <li><a href="">{{$page->translate($locale)->title}}</a></li>
+        </ul>
+    </div>
 
 
 <div class="academy_message">
@@ -63,8 +78,10 @@
     <div class="message_box">
       <p>
         تم استالم طلبكم بنجاح رقم : {{$course_reservation->id}} وسيتم التواصل معكم ف 48 ساعه 
-        @if($course_reservation->payment_time)
-          لطباعة او تحميل الفاتوره <a href="{{url('course-bill/'.$course_reservation->id)}}">الضغط هنا</a>
+        @if(isset($invoice))
+            @if($course_reservation->payment_time)
+              لطباعة او تحميل الفاتوره <a href="{{url('course-bill/'.$course_reservation->id)}}" class="btnBrint">الضغط هنا</a>
+            @endif
         @endif
        
       </p>
@@ -72,7 +89,8 @@
   </div>
 </div>
 
-
+ 
+@if(isset($invoice))
   <div class="course_reservation_bill">
     <div class="container">
       <div class="wrapper">
@@ -89,6 +107,6 @@
       </div>
     </div>
   </div>
-
+@endif
 
 @endsection

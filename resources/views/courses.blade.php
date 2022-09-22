@@ -8,9 +8,24 @@
     ?>
 
   
-  <div class="breadcrumb" style="background-image: url({{asset('assets/images/breadcrumb.png')}});">
-    <h5 class="breadcrumb-content">البرامج التدريبية</h5>
-  </div>
+  
+  
+  <div class="breadcrumb " style="position: relative;">
+        <div class="img_parent">
+            @if($video != "")
+                <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="">
+                    <source src="{{ Voyager::image($video) }}" type="video/mp4">
+                </video>
+            @else
+                <img src="{{ Voyager::image($page->image) }}">
+            @endif
+        </div>
+        <h5 class="breadcrumb-content">{{$page->translate($locale)->title}}</h5>
+        <ul class="list-unstyled">
+            <li><a href="/home">{{__('Home')}}</a></li>
+            <li><a href="">{{$page->translate($locale)->title}}</a></li>
+        </ul>
+    </div>
   
 
 

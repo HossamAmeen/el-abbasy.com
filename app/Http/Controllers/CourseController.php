@@ -5,6 +5,7 @@ use App\Models\{Course,CourseReservation,Specialty,Invoice};
 use App\Http\Payment;
 use App\Enums\PaymentMethod;
 use Illuminate\Http\Request;
+use App\Models\Page;
 
 class CourseController extends Controller
 {
@@ -21,8 +22,9 @@ class CourseController extends Controller
         $trainings = Course::where('course_type', 'training')->where('is_active', true);
         if(request('name')){
             // return ":"
-            $courses = $courses->where('course_name','like', '%'. request('name') .'%' );
-            $trainings = $trainings->where('course_name','like', '%'. request('name') .'%' );
+            
+            $courses = $courses->whereTranslation('course_name','like', '%'. request('name') .'%' );
+            $trainings = $trainings->whereTranslation('course_name','like', '%'. request('name') .'%' );
         }
         if(request('specialty_id')){
             $courses = $courses->where('specialty_id','like', '%'. request('specialty_id') .'%' );
@@ -30,11 +32,33 @@ class CourseController extends Controller
         }
         $courses = $courses->get();    
         $trainings = $trainings->get();
-        return view('courses', compact("courses",'trainings','specialties'),['specialty_id'=>request('specialty_id')]);
+        
+        $page = Page::where('model_name', 'Courses')->get()->first();
+        
+        $video ="";
+        $explode_video = json_decode($page->video, true);
+        if(!empty($explode_video)&& $page->video != null) {
+            $video = $explode_video[0]['download_link'];
+        }
+        
+        
+         $page = $page->load('translations');
+        return view('courses', compact("courses",'trainings','specialties','page','video'),['specialty_id'=>request('specialty_id')]);
     }
 
     public function reservation(Request $request, $course_id=0)
     {
+        $page = Page::where('model_name', 'CourseReservation')->get()->first();
+        
+        $video ="";
+        $explode_video = json_decode($page->video, true);
+        if(!empty($explode_video)&& $page->video != null) {
+            $video = $explode_video[0]['download_link'];
+        }
+        
+        
+         $page = $page->load('translations');
+         
         $success = 0;
         $specialties = Specialty::get();
         $course = Course::findOrFail(request('course_id'));
@@ -44,7 +68,7 @@ class CourseController extends Controller
             $success = 1;
             if($course_reservation->save())
             {
-                if (request('payment_time') == 'later') {
+                if (request('payment_time') == 'later') { 
                     return view("course_reservation_message", compact('success', 'course_reservation'));
                 }
                 else {
@@ -80,12 +104,24 @@ class CourseController extends Controller
             
         }
         $courses = Course::get();
-        return view("course_reservation", compact('courses', 'success','course', 'course_id','specialties'));
+        return view("course_reservation", compact('courses', 'success','course', 'course_id','specialties','page','video'));
     
     }
 
     public function reservation_bill($course_reservation_id)
     {
+        $page = Page::where('model_name', 'ReservationBill')->get()->first();
+        
+        $video ="";
+        $explode_video = json_decode($page->video, true);
+        if(!empty($explode_video)&& $page->video != null) {
+            $video = $explode_video[0]['download_link'];
+        }
+        
+        
+         $page = $page->load('translations');
+         
+         
         $success = request('success');
         $course_reservation = CourseReservation::find($course_reservation_id);
         if($course_reservation->payment_option == 1)
@@ -102,7 +138,7 @@ class CourseController extends Controller
             'details'=>$course_reservation->course->course_name,
 
         ]);
-        return view("course_reservation_message", compact('success', 'course_reservation','invoice'));
+        return view("course_reservation_message", compact('success', 'course_reservation','invoice','page','video'));
     }
     function ArabicNumbersToEnglish($string) {
         return strtr($string, array('۰' => '0', '۱' => '1', '۲' => '2', '۳' => '3', '۴' => '4', '۵' => '5', '۶' => '6', '۷' => '7', '۸' => '8', '۹' => '9', '٠' => '0', '١' => '1', '٢' => '2', '٣' => '3', '٤' => '4', '٥' => '5', '٦' => '6', '٧' => '7', '٨' => '8', '٩' => '9'));

@@ -38,8 +38,9 @@ class PreviewController extends Controller
 
     }
 
-    function callback()
+    function callback(Request $request)
     {
+         
         return view('callback_preview');
     }
 

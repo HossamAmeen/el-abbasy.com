@@ -65,15 +65,17 @@ class PayMobController extends Controller
             $transaction->save();
             $success = 1;
             
-             return redirect('/CallBack_Preview?success=true')->with('message' , __("success_payment"));
+            
+            return redirect('/reservation_bill/'.$transaction->mediator_id.'/bill')->with('message' , __("success_payment"));
+            // return redirect('/CallBack_Preview?success=true')->with('message' , __("success_payment"));
         }
         else
         { // transaction failed.
             $transaction->status = TransactionStatus::failed;
             $transaction->save();
             $success = 0;
-           
            return redirect('/CallBack_Preview?success=false')->with('message' , __("failed_payment"));
+          // return redirect('/CallBack_Preview?success=false')->with('message' , __("failed_payment"));
 
         }
     }

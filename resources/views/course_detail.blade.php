@@ -5,7 +5,7 @@
     use Illuminate\Support\Facades\App;
     $locale = App::currentLocale();
     ?>
-<div class="breadcrumb" style="background-image: url({{asset('assets/images/breadcrumb.png')}});">
+<div class="breadcrumb" style="background-image: url({{asset('storage/' . $course->course_image)}});">
   <h5 class="breadcrumb-content">معاينه الطلب</h5>
 </div>
 

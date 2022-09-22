@@ -24,7 +24,7 @@
             </div>
         </div>
     </div>
-
+        
 
 {{--  <div class="preview-order-compleate">--}}
 {{--      <div class="container">--}}
