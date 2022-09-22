@@ -6,6 +6,7 @@ use App\Http\Payment;
 use App\Enums\PaymentMethod;
 use Illuminate\Http\Request;
 use App\Models\Page;
+use Lang;
 
 class CourseController extends Controller
 {
@@ -63,13 +64,37 @@ class CourseController extends Controller
         $specialties = Specialty::get();
         $course = Course::findOrFail(request('course_id'));
         if (request()->isMethod('post')) {
+            $messages = [
+                'name.required' => Lang::get('A name is required'),
+                'email.required' => Lang::get('An email is required'),
+                'wallet_phone_number.required' => Lang::get('An email is required'),
+                'university.required' => Lang::get('collage is required'),
+                'collage.required' => Lang::get('collage is required'),
+                'phone_number.required' => Lang::get('An number is required'),
+                'national_id.required' => Lang::get('An National id is required'),
+                'nationality.required' => Lang::get('An nationality Title is required'),
+    
+            ];
+            $roles = [
+                'name' => 'required',
+                'email' => 'required',
+                'wallet_phone_number' => 'required',
+                'university' => 'required',
+                'collage' => 'required',
+                'phone_number' => 'required',
+                'national_id' => 'required',
+                'nationality'  => 'required',
+                'payment_method' => 'required_if:payment_time,now',
+                'wallet_phone_number' => 'required_if:payment_method,0'
+            ];
+            $this->validate(\request(), $roles);
             $course_reservation = CourseReservation::create($request->all());
             
             $success = 1;
             if($course_reservation->save())
             {
                 if (request('payment_time') == 'later') { 
-                    return view("course_reservation_message", compact('success', 'course_reservation'));
+                    return view("course_reservation_message", compact('success', 'course_reservation','page','video'));
                 }
                 else {
                     $payment_method_key = PaymentMethod::fromValue((int)request('payment_method'))->key;
@@ -92,12 +117,7 @@ class CourseController extends Controller
                     }elseif($payment_method_key == 'installment'){
                         $payment = new Payment($course_reservation, $price, (int)request('payment_method'));
                         return $payment->createInstallmentPayment();
-                    }
-                    
-                    
-                    
-                
-                
+                    }               
                 }
                
             }

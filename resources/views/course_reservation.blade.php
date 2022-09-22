@@ -88,22 +88,21 @@
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="form-group">
                 <label for="name">الاسم</label>
-                <input type="text" name="name" id="name" placeholder="الاسم" required class="form-control">
+                <input type="text" name="name" id="name" placeholder="الاسم" value="{{Request::old('name')}}" required class="form-control">
               </div>
             </div>
             
-
-
+ 
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="form-group">
                 <label for="national">الجنسية</label>
-                <input type="text" name="nationality" id="national" placeholder="الجنسية" class="form-control" required>
+                <input type="text" name="nationality" id="national" value="{{Request::old('nationality')}}" placeholder="الجنسية" class="form-control" required>
               </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="form-group">
                 <label for="IDnumber">رقم الهوية</label>
-                <input type="text" name="national_id" id="IDnumber" placeholder="يرجى ادخال رقم الهوية / جواز السفر لغير المصريين"
+                <input type="text" name="national_id" id="IDnumber" value="{{Request::old('national_id')}}" placeholder="يرجى ادخال رقم الهوية / جواز السفر لغير المصريين"
                   class="form-control" required>
                 <span class="note_number" style="color: red; font-size: 12px;">* يجب ن يكون الرقم باللغة الانجليزية</span>
 
@@ -114,15 +113,15 @@
                 <label for="phoneNumber">مفتاح الدوله – رقم الهاتف</label>
                 <input type="text" name="phone_number" id="phoneNumber"
                   placeholder="يررج ادخال الهاتف مسبوقا برمز الدوله التابع لها - )00000 - 00000000000)"
-                  class="form-control" required>
+                  class="form-control" value="{{Request::old('phone_number')}}" required>
                 <span class="note_number" style="color: red; font-size: 12px;">* يجب ن يكون الرقم باللغة الانجليزية</span>
 
               </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12">
-              <div class="form-group">
+              <div class="form-group"> 
                 <label for="phoneNumber"> البريد الإلكتروني </label>
-                <input type="email" name="email" id="phoneNumber" placeholder="البريد الإلكتروني" class="form-control" required>
+                <input type="email" value="{{Request::old('email')}}" name="email" id="phoneNumber" placeholder="البريد الإلكتروني" class="form-control" required>
               </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12">
@@ -152,17 +151,17 @@
                 <!--<input type="text" name="specialty" id="phoneNumber" placeholder="يرجى ادخال التخصص بالدراسه "-->
                 <!--  class="form-control" required>-->
               </div>
-            </div>
+            </div> 
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="form-group">
                 <label for="phoneNumber">الكلية</label>
-                <input type="text" name="collage" id="phoneNumber" placeholder="يرجى ادخال اسم الكلية " class="form-control" required>
+                <input type="text" name="collage" value="{{Request::old('collage')}}" id="phoneNumber" placeholder="يرجى ادخال اسم الكلية " class="form-control" required>
               </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12">
               <div class="form-group">
                 <label for="phoneNumber">الجامعه</label>
-                <input type="text" name="university" id="phoneNumber" placeholder="يرجى ادخال اسم الجامعه " class="form-control" required>
+                <input type="text" name="university" value="{{Request::old('university')}}" id="phoneNumber" placeholder="يرجى ادخال اسم الجامعه " class="form-control" required>
               </div>
             </div>
             <div class="col-sm-12 col-md-12 col-lg-12">
@@ -221,7 +220,7 @@
             <div class="col-sm-12 col-md-12 col-lg-12 phone-preview-course" style="display: none" >
               <div class="form-group">
                 <label for="phone_number">رقم هاتف المحفظة</label>
-                <input type="text" name="wallet_phone_number"  id="phone_number" placeholder="رقم هاتف المحفظة"
+                <input type="text" name="wallet_phone_number" value="{{Request::old('wallet_phone_number')}}"  id="phone_number" placeholder="رقم هاتف المحفظة"
                   class="form-control" >
               </div>
             </div>

@@ -127,6 +127,7 @@
     "ok": "حسنا",
     "A name is required": "الاسم مطلوب",
     "An email is required": "مطلوب بريد إلكتروني",
+    "collage is required": "الكلية مطلوبة",
     "An number is required": "الرقم مطلوب",
     "An number should be 11 digits": "يجب أن يتكون الرقم من 11 رقمًا",
     "An Message Title is required": "مطلوب عنوان الرسالة",
@@ -261,7 +262,7 @@
     "Our projects": "مشاريعنا",
     "Certificate Verification": "التحقق من الشهاده",
     "Certificate ID": "كود الشهادة",
-    "categories": "الاقسام"
-
+    "categories": "الاقسام",
+    "collage": "الكلية"
 
 }
